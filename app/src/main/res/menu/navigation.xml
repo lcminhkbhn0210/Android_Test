@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mHome"
+        android:title="Today"
+        android:icon="@drawable/ic_today"
+        />
+    <item android:title="Histoty"
+        android:id="@+id/mHistory"
+        android:icon="@drawable/ic_history"/>
+    <item android:title="Search"
+        android:id="@+id/mSearch"
+        android:icon="@drawable/ic_search"/>
+</menu>
