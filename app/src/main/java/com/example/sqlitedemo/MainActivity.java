@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
         tabLayout = findViewById(R.id.tab);
         tabLayout.setupWithViewPager(viewPager);
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_today);
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_home);
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_history);
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_search);
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
