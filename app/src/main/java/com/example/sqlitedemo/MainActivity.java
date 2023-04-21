@@ -12,11 +12,14 @@ import android.view.View;
 import com.example.sqlitedemo.adpter.ViewPagerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
     private ViewPager viewPager;
     private FloatingActionButton floatingActionButton;
+
+    private TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
         floatingActionButton = findViewById(R.id.fab);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager(),3);
         viewPager.setAdapter(adapter);
+        tabLayout = findViewById(R.id.tab);
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_today);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_history);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_search);
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
